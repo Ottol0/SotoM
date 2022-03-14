@@ -1,0 +1,23 @@
+*{  box-sizing: border-box;
+margin: o;
+padding: 0;}    
+
+.contenedorflex {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cajaflex  {
+    background-color: aqua;
+    width: 100px;  
+    height: 100px;
+    margin: 10px;
+   text-align: center;
+   
+}
