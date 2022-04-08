@@ -85,10 +85,12 @@
 
   .contenidoReco{
       padding: 10px;
+      
   }
   
   div.content {
-      display: flex;
+      
+    display: flex;
     background-color: #f5f1e8;
     height: 100%;
     
