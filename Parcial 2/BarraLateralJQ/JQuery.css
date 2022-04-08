@@ -1,0 +1,180 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cajaflex{ display: flex;}
+
+
+  #recomendacion1{
+    background-color: #34685c;
+  }
+  #recomendacion2{
+    background-color: #f2cc8f;
+  }
+  #recomendacion3{
+    background-color: #a7a7b3;
+  }
+  #recomendacion4{
+    background-color: #b2393e;
+  }
+
+  #recom1{
+    background-image: url(https://www.metalocus.es/sites/default/files/styles/mopis_news_carousel_item_desktop/public/metalocus_cien_anos_soledad_rivera_03.jpg?itok=vzz_qrJX);
+    color:#ffa420;
+    font-size:larger;
+    
+  }
+  #recom2{
+    background-image: url(https://images-na.ssl-images-amazon.com/images/I/81lB36lG5hL.jpg);
+    color:#1a1713;
+    font-size:larger;
+  }
+  #recom3{
+    background-image: url(https://mundootaku.online/wp-content/uploads/2021/07/%C2%BFEl-manga-realmente-necesita-un-final-definitivo.jpeg);
+    color:#75151e;
+    font-size:larger;
+  }
+  #recom4{
+    background-image: url(https://www.cuartomundo.cl/wp-content/uploads/2019/01/Umbrella-academy-001.jpg);
+    color:#2b2129;
+    font-size:larger;
+  }
+  div.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color:#354c3c;
+    width: 500px;
+    height: 100%;
+    
+  }
+   .esconder{
+     position: fixed;
+     width: 50px;
+     height: 50px;
+     background-image: url(https://www.milideas.net/wp-content/uploads/decorar-libros-9.jpg);
+     background-size: 50px;
+   }
+  .on{
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    margin-left: 0%;
+  }
+  .off{
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    margin-left: -190px;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+  }
+  div.sidebar a {
+    padding: calc(100%/4);
+  }
+
+  .contenidoReco{
+      padding: 10px;
+  }
+  
+  div.content {
+      display: flex;
+    background-color: #f5f1e8;
+    height: 100%;
+    
+    
+  }
+  
+  .contenidoReco { display: none; }
+  
+  #recomendacion1:target,
+  #recomendacion2:target,
+  #recomendacion3:target,
+  #recomendacion4:target { display: block;}
+  
+  @media screen and (max-width: 1000px) {
+    
+    div.sidebar {
+    flex-direction: row;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .cajaflex{
+        flex-direction: column;
+    }
+    div.sidebar a {
+      padding:6PX;
+      width:calc(100%/4);
+    }
+    div.content {
+      
+        margin-left: 0;
+    }
+    .on{
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      margin-top: 0%;
+    }
+    .off{
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      margin-left: 0%;
+      margin-top: -28px;
+    }
+  }
+
+    
+  @media screen and (max-width: 700px) {
+
+   
+    div.sidebar {
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 100%;
+    }
+    .sidebar a {
+      text-align: center;
+    }
+    #recom1{
+        width: 100vw;    }
+    #recom2{
+        width: 100vw;    }
+    #recom3{
+        width: 100vw;    }
+    #recom4{
+        width: 100vw;    }
+        .on{
+          -webkit-transition: 1s;
+          -moz-transition: 1s;
+          -ms-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s;
+          margin-left: 0%;
+        }
+        .off{
+          -webkit-transition: 1s;
+          -moz-transition: 1s;
+          -ms-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s;
+          margin-left: 0%;
+          margin-top: -145px;
+        }  
+}
