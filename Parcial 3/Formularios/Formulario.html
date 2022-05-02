@@ -62,13 +62,11 @@
 
             <div class="row">
                 <div class="col-lg-2">
-                    <button id="btn3" type="button" class="btn btn-default" data-toggle="modal"> Modal </button>
+                    <button id="btn2" type="button" class="btn btn-default" data-toggle="modal"> Modal </button>
                 </div>
             </div>
 
             <button id="btn1" type="button" class="btn btn-primary">Agregar</button>
-            <button id="btn2" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal1">Sin java</button>
-            <button id="btn3" type="button" class="btn btn-default" data-toggle="modal">Con java</button>
 
             <div class="alert alert-primary alert-dismissible collapse" role="alert" id="alerta1">
                 Se ha registrado El Libro
@@ -108,7 +106,7 @@
                         $('#alerta1').hide();
                     });
 
-                    $("#btn3").click(function() {
+                    $("#btn2").click(function() {
                         $('#modal1').modal();
 
                     });
