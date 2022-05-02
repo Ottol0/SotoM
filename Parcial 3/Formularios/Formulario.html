@@ -61,12 +61,21 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-2">
-                    <button id="btn2" type="button" class="btn btn-default" data-toggle="modal"> Modal </button>
+                <div class="col-lg-12">
+                    <button id="btn3" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPrim"> 
+                        ModalData 
+                    </button>
+                    <button id="btn2" type="button" class="btn btn-primary" data-toggle="modal"> ModalJS </button>
+                    <button id="btn1" type="button" class="btn btn-primary">Agregar</button>
                 </div>
+                
             </div>
 
-            <button id="btn1" type="button" class="btn btn-primary">Agregar</button>
+            <style>
+                body{ 
+                    background-color:#BDADA7;
+                }
+            </style>
 
             <div class="alert alert-primary alert-dismissible collapse" role="alert" id="alerta1">
                 Se ha registrado El Libro
@@ -76,7 +85,7 @@
             </div>
 
             
-            <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modalPrim" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -107,7 +116,7 @@
                     });
 
                     $("#btn2").click(function() {
-                        $('#modal1').modal();
+                        $('#modalPrim').modal();
 
                     });
                 });
