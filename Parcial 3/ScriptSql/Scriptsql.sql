@@ -4,14 +4,15 @@ CREATE DATAbase l19100799;
 use l19100799
 
 create table registro(
-    IdRegistro int IDENTITY(1,1),
+   IdRegistro int not null AUTO_INCREMENT,
     Nombre VARCHAR(100),
     Autor varchar(20),
     Edicion varchar(15),
     Editorial varchar(15),
     Genero VARCHAR(15),
     Fecha DATE,
-    Descripcion VARCHAR(300)
+    Descripcion VARCHAR(300),
+    PRIMARY KEY (idRegistro)
 );
 
 insert into registro( Nombre, Autor, Edicion, Editorial, Genero, Fecha, Descripcion)
