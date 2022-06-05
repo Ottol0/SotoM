@@ -1,7 +1,7 @@
 
 CREATE DATAbase l19100799;
 
-use l19100799
+use l19100799;
 
 create table registro(
    IdRegistro int not null AUTO_INCREMENT,
@@ -10,7 +10,7 @@ create table registro(
     Edicion varchar(15),
     Editorial varchar(15),
     Genero VARCHAR(15),
-    Fecha DATE,
+    Fecha VARCHAR(10),
     Descripcion VARCHAR(300),
     PRIMARY KEY (idRegistro)
 );

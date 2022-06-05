@@ -1,8 +1,8 @@
 //consulta en la bd
 $(document).ready(function(){
-    $('#btnconsulta').click(function(){
+   $('#btnconsulta').click(function(){
 
-        console.log('ctmrafa');
+        
         let varid= $('#idconsulta').val();
         $.post('../php/formulario.php', {par1:varid}, function(data){
             
@@ -11,9 +11,75 @@ $(document).ready(function(){
         }, 'json');
        
     });
+
+    $('#Agregar').click(function(){
+        
+        try { 
+            Nombre = $('#Nomlibro').val(); 
+            Autor = $('#Autor').val(); 
+            Edicion = $('#Edicion').val(); 
+            Editorial = $('#Editorial').val(); 
+            Genero = $('#Genero').val(); 
+            Fecha = $('#Fecha').val(); 
+            Descripcion = $('#Descrip').val(); 
+
+            if(($('#Nomlibro').val() || $('#Autor').val() || $('#Edicion').val() || $('#Editorial').val() || $('#Genero').val() || $('#Fecha').val() || $('#Descrip').val())=="" )
+            {
+                  swal( "No deje los campos vacíos");
+            }
+            else{
+                  $.post('../php/formAgregar.php',{par1:Nombre,par2:Autor,par3:Edicion,par4:Editorial,par5:Genero,par6:Fecha,par7:Descripcion},
+                  function(data){
+                      console.log(data);  
+                  },'json');
+                  swal("Libro Agregado"); 
+            } 
+      } catch (exception) {
+          swal("Error");
+      }        
+    });
+
+    $('#Elimina').click(function(){
+         
+        
+        $.post('../php/formEliminar.php', { IdRegistro: IdLibro }, function(data) {
+            console.log(data);
+        });
+
+        IdLibro = null;
+
+    });
+
+    $('#Modificar').click(function(){
+        try { 
+            console.log("ctmrogelio")
+            Nombre = $('#Nomlibro').val(); 
+            Autor = $('#Autor').val(); 
+            Edicion = $('#Edicion').val(); 
+            Editorial = $('#Editorial').val(); 
+            Genero = $('#Genero').val(); 
+            Fecha = $('#Fecha').val(); 
+            Descripcion = $('#Descrip').val(); 
+
+            if(($('#Nomlibro').val() || $('#Autor').val() || $('#Edicion').val() || $('#Editorial').val() || $('#Genero').val() || $('#Fecha').val() || $('#Descrip').val())=="" )
+            {
+                  swal( "No deje los campos vacíos");
+            }
+            else{
+                  $.post('../php/formModificar.php',{par1:Nombre,par2:Autor,par3:Edicion,par4:Editorial,par5:Genero,par6:Fecha,par7:Descripcion, IdRegistro:IdLibro},
+                  function(data){
+                  },'json');
+                  swal("Libro Modificado"); 
+            } 
+      } catch (exception) {
+          swal("Error");
+      }        
+    });
+
+    var IdLibro;
     function refrescar(objeto) {
-    
-        console.log(objeto);
+        IdLibro  = objeto.IdRegistro;
+        console.log(objeto.IdRegistro);
     
         $('#Nomlibro').val(objeto.Nombre);
         $('#Autor').val(objeto.Autor);
