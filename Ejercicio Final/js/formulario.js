@@ -43,16 +43,17 @@ $(document).ready(function(){
          
         
         $.post('../php/formEliminar.php', { IdRegistro: IdLibro }, function(data) {
-            console.log(data);
+            refrescar(data);
         });
 
+        swal("Libro Eliminado");
         IdLibro = null;
 
     });
 
     $('#Modificar').click(function(){
         try { 
-            console.log("ctmrogelio")
+            
             Nombre = $('#Nomlibro').val(); 
             Autor = $('#Autor').val(); 
             Edicion = $('#Edicion').val(); 
